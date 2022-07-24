@@ -16,6 +16,10 @@ let package = Package(
             dependencies: []),
         .target(
             name: "tl2swift",
-            dependencies: ["TlParserLib"])
+            dependencies: ["TlParserLib"]),
+        .testTarget(
+            name: "ParserTests",
+            dependencies: ["TlParserLib"],
+            path: "Tests")
     ]
 )

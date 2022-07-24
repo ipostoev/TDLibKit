@@ -6,16 +6,16 @@
 import Foundation
 
 /// Finds enums that need indirect keyword
-final class IndirectEnumsEvaluator {
+public final class IndirectEnumsEvaluator {
     
-    private var indirectEnumNames: [String] = []
+    public var indirectEnumNames: [String] = []
     private let schema: Schema
     
-    init(schema: Schema) {
+    public init(schema: Schema) {
         self.schema = schema
     }
     
-    func evaluate() {
+    public func evaluate() {
         let allEnumNames = schema.enumInfoes.map {
             $0.enumType.lowercased()
         }
